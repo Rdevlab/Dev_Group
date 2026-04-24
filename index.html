@@ -13,9 +13,9 @@
   </head>
   <body>
     <section
-      class="w-full h-screen flex items-center justify-center bg-green-600 fixed top-0 left-0 right-0 bottom-0"
+      class="w-full h-screen flex items-center justify-center bg-green-600 fixed top-0 p-10 left-0 right-0 bottom-0"
       id="loginsec">
-      <div class="flex flex-col gap-4 p-4 rounded-md bg-white/30 backdrop-blur-xl">
+      <div class="flex flex-col gap-4 xl:p-4 md:p-4 p-2 rounded-md bg-white/30 backdrop-blur-xl">
         <div class="flex gap-4 items-center">
           <label for="username">UserName</label>
           <input
@@ -41,7 +41,7 @@
 
     <section
       id="taskContainer"
-      class="w-full h-screen flex flex-wrap gap-2 p-10 bg-green-300"></section>
+      class="w-full h-screen flex flex-wrap flex-col md:flex-row xl:flex-row gap-2 p-10 bg-green-300"></section>
 
     <script>
       const tasks = [
@@ -113,7 +113,8 @@
           tasks.forEach((task) => {
             if (username.value === task.designer) {
               const container = document.createElement("div");
-              container.classList = "flex flex-col gap-2 p-2 w-150 h-max rounded-md bg-white/30";
+              container.classList =
+                "flex flex-col gap-2 p-2 xl:w-150 w-full h-max rounded-md bg-white/30";
               container.innerHTML = `
               <h2 class="text-xl font-bold"> <stron>Title:</strong> ${task.title}</h2>
               <p><strong>Designer:</strong>${task.designer}</p>
