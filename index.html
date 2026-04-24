@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Dev_Tasks</title>
+    <style>
+      * {
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section
+      class="w-full h-screen flex items-center justify-center bg-green-600 fixed top-0 left-0 right-0 bottom-0"
+      id="loginsec">
+      <div class="flex flex-col gap-4 p-4 rounded-md bg-white/30 backdrop-blur-xl">
+        <div class="flex gap-4 items-center">
+          <label for="username">UserName</label>
+          <input
+            type="text"
+            id="username"
+            class="px-2 py-1 rounded-md border border-gray-300 w-full" />
+        </div>
+        <div class="flex gap-4 items-center">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            class="px-2 py-1 rounded-md border border-gray-300 w-full" />
+        </div>
+        <button
+          type="submit"
+          class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+          onclick="login()">
+          Login
+        </button>
+      </div>
+    </section>
+
+    <section
+      id="taskContainer"
+      class="w-full h-screen flex flex-wrap gap-2 p-10 bg-green-300"></section>
+
+    <script>
+      const tasks = [
+        { id: 1, round: 1, title: "", designer: "", info: "", time: "", link: "" },
+        { id: 2, round: 1, title: "", designer: "", info: "", time: "", link: "" },
+        { id: 3, round: 1, title: "", designer: "", info: "", time: "", link: "" },
+        { id: 4, round: 1, title: "", designer: "", info: "", time: "", link: "" },
+        { id: 5, round: 1, title: "", designer: "", info: "", time: "", link: "" },
+      ];
+
+      const Users = [
+        { id: 1, name: "Rohullah Ahmadi", username: "Rohullah", password: "neo" },
+        { id: 2, name: "Hanif Sarabi", username: "sarabi", password: "sarabi9872" },
+        { id: 3, name: "Mahram Rezaiee", username: "mahram", password: "maharam234124" },
+        { id: 4, name: "Ali Reza Hashimi", username: "hashimi", password: "hashimi23874" },
+        { id: 5, name: "Ali Nabavi", username: "navbavi", password: "nabavi313" },
+      ];
+
+      const username = document.querySelector("#username");
+      const password = document.querySelector("#password");
+      const loginsection = document.querySelector("#loginsec");
+
+      function login() {
+        const user = Users.find((u) => {
+          return u.username === username.value && u.password === password.value;
+        });
+        if (user) {
+          loginsection.classList.add("hidden");
+          tasks.forEach((task) => {
+            if (username.value === task.designer) {
+              const container = document.createElement("div");
+              container.classList = "flex flex-col gap-2 p-2 w-150 h-max rounded-md bg-white/30";
+              container.innerHTML = `
+              <h2 class="text-xl font-bold"> <stron>Title:</strong> ${task.title}</h2>
+              <p><strong>Designer:</strong>${task.designer}</p>
+              <p><strong>Info:</strong>${task.info}</p>
+              <p><strong>Time:</strong>${task.time}</p>
+              <a href="${task.link}" class="text-blue-500 hover:underline">Task Link</a>
+            `;
+              document.querySelector("#taskContainer").appendChild(container);
+            }
+          });
+        } else {
+          alert("Invalid username or password");
+        }
+      }
+    </script>
+  </body>
+</html>
