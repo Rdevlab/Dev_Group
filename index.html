@@ -4,35 +4,74 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    <script src="app.js" defer></script>
     <title>Dev_Tasks</title>
     <style>
       * {
         outline: none;
       }
+      ::-webkit-scrollbar {
+        display: none;
+      }
+      .animate {
+        animation: animate 5s linear forwards;
+      }
+      @keyframes animate {
+        to {
+          width: 0;
+        }
+      }
+      .enter {
+        animation: enter 0.5s ease forwards;
+      }
+      .bg {
+        background:
+          linear-gradient(135deg, rgba(0, 0, 0, 0.165), rgba(0, 0, 0, 0.141)),
+          url("./assets/bg.jpg");
+        background-size: cover;
+        background-position: center;
+      }
+      @keyframes enter {
+        from {
+          transform: translateX(100px);
+        }
+      }
     </style>
   </head>
-  <body>
+  <body class="overflow-hidden">
     <section
-      class="w-full h-screen flex items-center justify-center bg-green-600 fixed top-0 p-10 left-0 right-0 bottom-0"
+      class="w-full h-screen flex items-center justify-center bg fixed top-0 p-10 left-0 right-0 bottom-0"
       id="loginsec">
-      <div class="flex flex-col gap-4 xl:p-4 md:p-4 p-2 rounded-md bg-white/30 backdrop-blur-xl">
-        <div class="flex gap-4 items-center">
-          <label for="username">UserName</label>
+      <div
+        class="flex flex-col xl:gap-6 gap-4 xl:p-10 md:p-4 p-2 rounded-md bg-white/30 backdrop-blur-xl shadow-xl">
+        <div class="flex flex-col gap-2 items-center">
+          <i class="fa-regular fa-user text-5xl"></i>
+          <h1 class="font-bold xl:text-2xl text-lg w-full text-center">Log in to your account</h1>
+        </div>
+        <div class="flex items-start flex-col">
+          <label for="username">Enter your userName</label>
           <input
             type="text"
             id="username"
-            class="px-2 py-1 rounded-md border border-gray-300 w-full" />
+            maxlength="12"
+            placeholder="Username"
+            class="border border-transparent w-full border-b-black bg-none p-1" />
         </div>
-        <div class="flex gap-4 items-center">
-          <label for="password">Password</label>
+        <div class="flex items-start flex-col">
+          <label for="password"> Enter your password</label>
           <input
             type="password"
             id="password"
-            class="px-2 py-1 rounded-md border border-gray-300 w-full" />
+            placeholder="password"
+            maxlength="12"
+            class="border border-transparent border-b-black w-full p-1" />
         </div>
         <button
           type="submit"
-          class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600"
+          class="px-4 py-2 bg-blue-600 cursor-pointer text-white rounded-md hover:bg-blue-400 duration-200"
           onclick="login()">
           Login
         </button>
@@ -41,94 +80,7 @@
 
     <section
       id="taskContainer"
-      class="w-full h-screen flex flex-wrap flex-col md:flex-row xl:flex-row gap-2 p-10 bg-green-300"></section>
-
-    <script>
-      const tasks = [
-        {
-          id: 1,
-          round: 1,
-          title: "Wellcome to your tasks page",
-          designer: "Rohullah",
-          info: "It's so good that you have started a jounry towards your goals",
-          time: 24,
-          link: "https://google.com",
-        },
-        {
-          id: 2,
-          round: 1,
-          title: "Wellcome to your tasks page",
-          designer: "sarabi",
-          info: "You have a new task assigned to you",
-          time: 12,
-          link: "https://google.com",
-        },
-        {
-          id: 3,
-          round: 1,
-          title: "Wellcome to your tasks page",
-          designer: "mahram",
-          info: "Please review the latest design mockups",
-          time: 18,
-          link: "https://google.com",
-        },
-        {
-          id: 4,
-          round: 1,
-          title: "Wellcome to your tasks page",
-          designer: "hashimi",
-          info: "Complete the documentation for the new feature",
-          time: 24,
-          link: "https://google.com",
-        },
-        {
-          id: 5,
-          round: 1,
-          title: "Wellcome to your tasks page",
-          designer: "nabavi",
-          info: "Fix the bugs reported in the previous release",
-          time: 30,
-          link: "https://google.com",
-        },
-      ];
-
-      const Users = [
-        { id: 1, name: "Rohullah Ahmadi", username: "Rohullah", password: "neo" },
-        { id: 2, name: "Hanif Sarabi", username: "sarabi", password: "Hanif@#2001" },
-        { id: 3, name: "Mahram Rezaiee", username: "mahram", password: "M523" },
-        { id: 4, name: "Ali Reza Hashimi", username: "hashimi", password: "Ali435" },
-        { id: 5, name: "Ali Nabavi", username: "nabavi", password: "nabavi12" },
-      ];
-
-      const username = document.querySelector("#username");
-      const password = document.querySelector("#password");
-      const loginsection = document.querySelector("#loginsec");
-
-      function login() {
-        const user = Users.find((u) => {
-          return u.username === username.value && u.password === password.value;
-        });
-        if (user) {
-          loginsection.classList.add("hidden");
-          tasks.forEach((task) => {
-            if (username.value === task.designer) {
-              const container = document.createElement("div");
-              container.classList =
-                "flex flex-col gap-2 p-2 xl:w-150 w-full h-max rounded-md bg-white/30";
-              container.innerHTML = `
-              <h2 class="text-xl font-bold"> <stron>Title:</strong> ${task.title}</h2>
-              <p><strong>Designer:</strong>${task.designer}</p>
-              <p><strong>Info:</strong>${task.info}</p>
-              <p><strong>Time:</strong>${task.time}</p>
-              <a href="${task.link}" class="text-blue-500 hover:underline">Task Link</a>
-            `;
-              document.querySelector("#taskContainer").appendChild(container);
-            }
-          });
-        } else {
-          alert("Invalid username or password");
-        }
-      }
-    </script>
+      class="w-full h-screen flex flex-wrap flex-col justify-around md:flex-row xl:flex-row gap-8 p-10 bg overflow-hidden overflow-y-scroll"></section>
+    <section class="absolute right-14 bottom-14 flex flex-col gap-4" id="toastcontaienr"></section>
   </body>
 </html>
