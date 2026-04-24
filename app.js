@@ -62,6 +62,7 @@ const Users = [
 const username = document.querySelector("#username");
 const password = document.querySelector("#password");
 const loginsection = document.querySelector("#loginsec");
+const notes = document.querySelector("#notes");
 
 function login() {
   const user = Users.find((u) => {
@@ -69,6 +70,8 @@ function login() {
   });
   if (user) {
     loginsection.classList.add("hidden");
+    notes.classList.add("hidden");
+
     tasks.forEach((task) => {
       if (username.value === task.designer) {
         const container = document.createElement("div");
@@ -98,6 +101,7 @@ function login() {
   }
   if (username.value === "admin1" && password.value === "neo1") {
     loginsection.classList.add("hidden");
+    notes.classList.add("hidden");
     tasks.forEach((task) => {
       const container = document.createElement("div");
       container.classList = "flex flex-col gap-2 p-2 xl:w-150 w-full h-max rounded-md bg-white/50";
