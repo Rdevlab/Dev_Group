@@ -41,14 +41,42 @@
           transform: translateX(100px);
         }
       }
+      .show {
+        animation: show 0.5s linear alternate forwards;
+      }
+      @keyframes show {
+        from {
+          height: 0;
+          overflow: hidden;
+          display: none;
+        }
+        to {
+          height: 480px;
+          overflow: auto;
+        }
+      }
+      .show1 {
+        animation: show1 0.5s linear alternate forwards;
+      }
+      @keyframes show1 {
+        from {
+          height: 480px;
+          overflow: auto;
+        }
+        to {
+          height: 0;
+          overflow: hidden;
+          display: none;
+        }
+      }
     </style>
   </head>
   <body class="overflow-hidden">
     <section
-      class="w-full h-screen flex items-center justify-center bg fixed top-0 p-10 left-0 right-0 bottom-0"
+      class="w-full h-screen flex items-center justify-center bg fixed top-0 p-10 left-0 right-0 bottom-0 overflow-hidden"
       id="loginsec">
       <div
-        class="flex flex-col xl:gap-6 gap-4 xl:p-10 md:p-4 p-2 rounded-md bg-white/30 backdrop-blur-xl shadow-xl">
+        class="flex flex-col xl:gap-6 gap-4 xl:p-10 md:p-8 p-8 rounded-md bg-white/30 backdrop-blur-xl shadow-xl">
         <div class="flex flex-col gap-2 items-center">
           <i class="fa-regular fa-user text-5xl"></i>
           <h1 class="font-bold xl:text-2xl text-lg w-full text-center">Log in to your account</h1>
@@ -79,16 +107,41 @@
         </button>
       </div>
     </section>
+
+    <!-- notification -->
+    <button
+      class="p-2 bg-white/50 backdrop-blur-xl rounded-full flex items-center justify-center absolute right-6 top-4 z-50"
+      onclick="showNotification()"
+      id="showNotificationBtn">
+      <i class="fas fa-bell"></i>
+    </button>
     <article
       id="notes"
-      class="absolute w-50 xl:text-xl flex flex-col gap-3 items-center p-4 bg-white/50 backdrop-blur-xl rounded-xl xl:right-14 right-2 xl:top-14 top-2">
-      <span class="xl:text-4xl text-xl"><i class="fab fa-github"></i></span>
-      <p>Learn github and Deploy your mini projects on it, please!</p>
+      class="absolute w-70 h-max xl:text-xl flex flex-col gap-3 items-center p-4 bg-white/50 backdrop-blur-xl rounded-xl xl:right-14 right-6 xl:top-14 top-16 show duration-300">
+      <div class="flex flex-col items-center gap-4 border rounded-xl p-2">
+        <span class="xl:text-4xl text-xl"><i class="fab fa-github"></i></span>
+        <p dir="rtl" class="text-sm">
+          دوستان عزیز در جریان این برنامه شما باید اپ گیتهاب را یاد داشته باشید. اگر هنوز شروع
+          نکردید هم شروع کنید و در ختم پروژه فقط لینک پروژه خود را بفرستید
+        </p>
+      </div>
+
+      <div class="flex flex-col items-center gap-4 border rounded-xl p-2">
+        <span class="xl:text-4xl text-xl"><i class="fab fa-figma"></i></span>
+        <p class="text-sm" dir="rtl">
+          دوستایل عزیز عکس ها به صورت نمونه ارایه میگردد. کار شما نباید دقیقا شبیه عکس ها باشد. شما
+          میتوانید با خلاقیت خودتان انها را بهتر و زیباتر طراحی کنید. هدف اینست که شما با چالش های
+          مختلف آشنا بشید و بتوانید انها را حل کنید. نگران نباشید اگر نتوانستید دقیقا شبیه عکس ها
+          طراحی کنید.
+        </p>
+      </div>
     </article>
 
     <section
       id="taskContainer"
-      class="w-full h-screen flex flex-col justify-around md:flex-row xl:flex-row gap-8 p-10 bg overflow-hidden overflow-y-scroll"></section>
-    <section class="absolute right-14 bottom-14 flex flex-col gap-4" id="toastcontaienr"></section>
+      class="w-full h-screen flex flex-col justify-around md:flex-row xl:flex-row gap-8 p-10 bg overflow-hidden overflow-y-scroll xl:flex-wrap md:flex-wrap"></section>
+    <section
+      class="absolute right-14 bottom-14 flex flex-col gap-4 overflow-hidden"
+      id="toastcontaienr"></section>
   </body>
 </html>
