@@ -90,7 +90,7 @@
             placeholder="Username"
             class="border border-transparent w-full border-b-black bg-none p-1" />
         </div>
-        <div class="flex items-start flex-col">
+        <div class="flex items-start flex-col relative">
           <label for="password"> Enter your password</label>
           <input
             type="password"
@@ -98,6 +98,9 @@
             placeholder="password"
             maxlength="12"
             class="border border-transparent border-b-black w-full p-1" />
+          <button class="absolute top-1/2 right-2" id="eyeBtnPassword">
+            <i class="fas fa-eye"></i>
+          </button>
         </div>
         <button
           type="submit"
@@ -115,9 +118,10 @@
       id="showNotificationBtn">
       <i class="fas fa-bell"></i>
     </button>
+
     <article
       id="notes"
-      class="absolute w-70 h-max xl:text-xl flex flex-col gap-3 items-center p-4 bg-white/50 backdrop-blur-xl rounded-xl xl:right-14 right-6 xl:top-14 top-16 show duration-300">
+      class="absolute w-70 xl:text-xl flex flex-col gap-3 items-center p-4 bg-white/50 backdrop-blur-xl rounded-xl xl:right-14 right-6 xl:top-14 top-16 z-50 show1 duration-300">
       <div class="flex flex-col items-center gap-4 border rounded-xl p-2">
         <span class="xl:text-4xl text-xl"><i class="fab fa-github"></i></span>
         <p dir="rtl" class="text-sm">
@@ -136,12 +140,27 @@
         </p>
       </div>
     </article>
+    <!-- show proect titles -->
+    <div class="absolute top-10 flex gap-2">
+      <aside
+        class="flex flex-col min-w-16 gap-4 h-max py-4 pr-4 bg-white/50 backdrop-blur-md pt-2 pr-2 overflow-y-scroll rounded-r-xl"
+        id="titleShow"></aside>
+      <div
+        class="w-0 min-h-10 relative bg-white/20 rounded-xl flex flex-col gap-2 duration-200 overflow-hidden"
+        id="titleText">
+        <button
+          onclick="titleTextClose()"
+          class="absolute right-4 top-2 p-1 rounded-full hover:bg-red-400 hover:text-white cursor-pointer duration-200 flex items-center justify-center">
+          <i class="fas fa-close"></i>
+        </button>
+      </div>
+    </div>
 
     <section
       id="taskContainer"
       class="w-full h-screen flex flex-col justify-around md:flex-row xl:flex-row gap-8 p-10 bg overflow-hidden overflow-y-scroll xl:flex-wrap md:flex-wrap"></section>
     <section
-      class="absolute right-14 bottom-14 flex flex-col gap-4 overflow-hidden"
+      class="absolute right-14 bottom-14 flex flex-col gap-6 overflow-hidden overflow-y-scroll"
       id="toastcontaienr"></section>
   </body>
 </html>
