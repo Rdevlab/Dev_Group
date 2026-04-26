@@ -368,10 +368,11 @@ document.querySelectorAll(".titleContainer").forEach((item) => {
       item.classList.remove("shadow-xl");
       item.classList.add("hover:bg-white/20");
       item.classList.remove("bg-white/20");
-      item.classList.toggle("scale-110");
-      item.classList.toggle("shadow-xl");
-      item.classList.toggle("bg-white/20");
     });
+    item.classList.toggle("scale-110");
+    item.classList.toggle("shadow-xl");
+    item.classList.toggle("bg-white/20");
+
     document.querySelector("#titleText").classList.add("w-50");
   });
 });
@@ -387,12 +388,20 @@ function titleTextClose() {
 }
 
 function updateTitle(e) {
-  document.querySelector("#titleText").innerHTML = "";
+  document.querySelector("#titleText").innerHTML = `<button
+          onclick="titleTextClose()"
+          class="absolute right-4 top-2 p-1 rounded-full hover:bg-red-400 hover:text-white cursor-pointer duration-200 flex items-center justify-center">
+          <i class="fas fa-close"></i>
+        </button>`;
   tasks.forEach((tas) => {
     if (e === tas.designer) {
       const container = document.createElement("div");
       container.classList = "flex gap-4 p-2 items-center";
-      container.innerHTML = `<p>${tas.title}</p>`;
+      container.innerHTML = `<button
+          onclick="titleTextClose()"
+          class="absolute right-4 top-2 p-1 rounded-full hover:bg-red-400 hover:text-white cursor-pointer duration-200 flex items-center justify-center">
+          <i class="fas fa-close"></i>
+        </button> <p>${tas.title}</p>`;
 
       document.querySelector("#titleText").append(container);
     }
