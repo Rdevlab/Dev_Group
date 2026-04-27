@@ -9,7 +9,7 @@ const tasks = [
     info: `Create prjects, imporve the platform`,
     link: "",
     finalLink: "https://dev_group_mu.vercel.app",
-    state: "incomplete",
+    state: "completed",
   },
   {
     id: 2,
@@ -45,7 +45,7 @@ const tasks = [
     `,
     link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIuza7xgQsQwrJukBLtY_ODcm6Zi0XWcfuiw&s",
     finalLink: "https://ali13767676.github.io/taskone/",
-    state: "incomplete",
+    state: "completed",
   },
   {
     id: 5,
@@ -163,7 +163,7 @@ function login() {
   });
   if (user) {
     loginsection.classList.add("hidden");
-    document.querySelector("#titleShow").classList.add("hidden");
+    document.querySelector("#asideTitleShow").classList.add("hidden");
 
     tasks.forEach((task) => {
       if (username.value === task.designer) {
@@ -186,34 +186,21 @@ function login() {
              <div class="flex items-center justify-between px-8 gap-10">
                 <a href="${task.finalLink}" class="hover:underline text-black-800 hover:text-blue-800"> Task Final view made by ${task.designer}</a>
                 <span class="flex items-center p-2">
-                <span id="stateIconContainer" class="">
-                  <i id="stateIcon"></i>
-                </span>
+                <span id="stateIconContainer">
+                <span>
                   ${task.state}
                 </span>
               </div>
               <img src="${task.link}" class="w-full h-auto rounded-xl" />
               `;
         document.querySelector("#taskContainer").appendChild(container);
-        function updateState() {
-          if (task.state === "completed") {
-            document.querySelector("#stateIcon").classList = "fas fa-user";
-            document.querySelector("#stateIconContainer").classList =
-              "flex p-1 gap-2 rounded-full bg-green-700 text-white";
-          } else if (task.state === "incomplete") {
-            document.querySelector("#stateIcon").classList = "fas fa-x";
-            document.querySelector("#stateIconContainer").classList =
-              "flex p-1 rounded-full bg-red-600 text-white";
-          }
-        }
       }
-      updateState();
     });
     username.value = "";
     password.value = "";
   } else if (username.value === "admin" && password.value === "password") {
     loginsection.classList.add("hidden");
-    document.querySelector("#titleShow").classList.add("hidden");
+    document.querySelector("#asideTitleShow").classList.add("hidden");
     tasks.forEach((task) => {
       const container = document.createElement("div");
       container.classList = "flex flex-col gap-2 p-2 xl:w-150 w-full h-max rounded-md bg-white/50";
@@ -234,7 +221,6 @@ function login() {
                 <a href="${task.finalLink}" class="hover:underline text-black-800 hover:text-blue-800"> Task Final view made by ${task.designer}</a>
                 <span class="flex items-center p-2">
                 <span id="stateIconContainer" class="stateIconContainer">
-                <i class="fas fa-checkmark" id="stateIcon"></i>
                 </span>
                   ${task.state}
                 </span>
@@ -242,25 +228,6 @@ function login() {
               <img src="${task.link}" class="w-full h-auto rounded-xl" />
             `;
       document.querySelector("#taskContainer").appendChild(container);
-      function updateState() {
-        if (task.state === "completed") {
-          document.querySelectorAll(".stateIconContainer").forEach((container) => {
-            container.classList =
-              "flex p-1 gap-2 rounded-full bg-green-700 text-white stateIconContainer";
-            document.querySelectorAll(".stateIconContainer i").forEach((icon) => {
-              icon.classList = "fas fa-checkmark stateIcon";
-            });
-          });
-        } else if (task.state === "incomplete") {
-          document.querySelectorAll(".stateIconContainer").forEach((container) => {
-            container.classList = "flex p-1 rounded-full bg-red-600 text-white stateIconContainer";
-            document.querySelectorAll(".stateIconContainer i").forEach((icon) => {
-              icon.classList = "fas fa-x";
-            });
-          });
-        }
-      }
-      updateState();
     });
 
     username.value = "";
@@ -310,7 +277,7 @@ function showtasksTitle() {
     const container = document.createElement("button");
     container.setAttribute("onclick", `updateTitle('${user.username}')`);
     container.classList =
-      "flex items-center gap-2 p-1 hover:scale-110 hover:shadow-xl cursor-pointer hover:bg-white/20  rounded-full ml-2 h-max w-ma w-full justify-center  titleContainer duration-300";
+      "flex items-center gap-2 p-1 hover:scale-110 hover:shadow-xl cursor-pointer hover:bg-white/20  rounded-full ml-2 h-max w-70 w-full justify-center  titleContainer duration-300";
     container.innerHTML = `
     <img src="${user.image}" class="w-8 h-8 rounded-full" />
     <div class="flex w-full h-full items-center  text-black hidden title duration-200">
@@ -349,7 +316,7 @@ document.querySelectorAll(".titleContainer").forEach((item) => {
     item.classList.toggle("shadow-xl");
     item.classList.toggle("bg-white/20");
 
-    document.querySelector("#titleText").classList.add("w-50");
+    document.querySelector("#titleText").classList.add("w-80");
   });
 });
 
@@ -360,27 +327,29 @@ function showNotification() {
 }
 
 function titleTextClose() {
-  document.querySelector("#titleText").classList.toggle("w-50");
+  document.querySelector("#titleText").classList.toggle("w-80");
 }
 
 function updateTitle(e) {
-  document.querySelector("#titleText").innerHTML = `<button
-          onclick="titleTextClose()"
-          class="absolute right-4 top-2 p-1 rounded-full hover:bg-red-400 hover:text-white cursor-pointer duration-200 flex items-center justify-center">
-          <i class="fas fa-close"></i>
-        </button>`;
+  document.querySelector("#titleText2").innerHTML = "";
   let i = 1;
   tasks.forEach((tas) => {
     if (e === tas.designer) {
       const container = document.createElement("div");
-      container.classList = "flex gap-4 p-2 items-center";
-      container.innerHTML = `<button
-          onclick="titleTextClose()"
-          class="absolute right-4 top-2 p-1 rounded-full hover:bg-red-400 hover:text-white cursor-pointer duration-200 flex items-center justify-center">
-          <i class="fas fa-close"></i>
-        </button> <p class="w-full bg-white/50 px-2 py-1 rounded-md">${i++}: ${tas.title}</p>`;
-
-      document.querySelector("#titleText").append(container);
+      container.classList = "flex gap-2 items-center bg-white/50 p-1 w-full text-sm rounded-xl";
+      container.innerHTML = `
+      <span class='flex w-8 h-8 shrink-0 items-center p-1 rounded-full justify-center bg-green-300'>${i++}</span>
+       <div class="flex flex-col w-full">
+          <strong>Designer: ${tas.designer}</strong>
+          <p class="font-semibold">${tas.title}</p>  
+          <div class="flex items-center w-full justify-between"> 
+            <span>Round: ${tas.round}</span>
+            <p id="taskState" class="flex items-center gap-1 px-2">
+            ${tas.state}</p>
+         </div>
+        </div>
+        `;
+      document.querySelector("#titleText2").append(container);
     }
   });
 }

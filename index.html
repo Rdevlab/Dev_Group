@@ -78,8 +78,9 @@
       <div
         class="flex flex-col xl:gap-6 gap-4 xl:p-10 md:p-8 p-8 rounded-md bg-white/30 backdrop-blur-xl shadow-xl">
         <div class="flex flex-col gap-2 items-center">
-          <span class="flex justify-center items-center p-2 border rounded-full w-20 h-20"
-            ><i class="fa-regular fa-user text-5xl text-green-800"></i
+          <span
+            class="flex justify-center items-center p-2 border border-white rounded-full w-20 h-20"
+            ><i class="fa-regular fa-user text-5xl text-white"></i
           ></span>
           <h1 class="font-bold xl:text-2xl text-lg w-full text-center">Log in to your account</h1>
         </div>
@@ -117,7 +118,7 @@
 
     <!-- notification -->
     <button
-      class="p-2 bg-white/50 backdrop-blur-xl rounded-full flex items-center justify-center absolute right-6 top-4 z-50"
+      class="p-2 bg-white/50 backdrop-blur-xl rounded-full flex items-center justify-center absolute text-white right-6 top-4 z-50"
       onclick="showNotification()"
       id="showNotificationBtn">
       <i class="fas fa-bell"></i>
@@ -125,7 +126,7 @@
 
     <article
       id="notes"
-      class="absolute w-70 xl:text-xl flex flex-col gap-3 items-center p-4 bg-white/50 backdrop-blur-xl rounded-xl xl:right-14 right-6 xl:top-14 top-16 z-50 show1 duration-300">
+      class="absolute w-80 xl:text-xl flex flex-col gap-3 items-center p-4 bg-white/50 backdrop-blur-xl rounded-xl xl:right-14 right-6 xl:top-14 top-16 z-50 show1 duration-300">
       <div class="flex flex-col items-center gap-4 border rounded-xl p-2">
         <span class="xl:text-4xl text-xl"><i class="fab fa-github"></i></span>
         <p dir="rtl" class="text-sm">
@@ -145,18 +146,19 @@
       </div>
     </article>
     <!-- show proect titles -->
-    <div class="absolute top-10 flex gap-2">
+    <div class="absolute top-10 flex gap-2" id="asideTitleShow">
       <aside
-        class="flex flex-col min-w-16 gap-4 h-max py-4 pr-4 bg-green-200/50 backdrop-blur-md pt-2 pr-2 overflow-y-scroll rounded-r-xl"
+        class="flex flex-col min-w-16 gap-4 h-max py-4 pr-4 bg-green-200/50 backdrop-blur-md pt-2 pr-2 overflow-y-scroll rounded-r-xl z-40"
         id="titleShow"></aside>
       <div
-        class="w-0 min-h-10 relative bg-white/20 rounded-xl flex flex-col gap-1 pt-6 duration-200 overflow-hidden"
+        class="w-0 min-h-10 relative bg-white/20 rounded-xl backdrop-blur-sm flex flex-col gap-1 pt-6 duration-200 overflow-hidden"
         id="titleText">
         <button
           onclick="titleTextClose()"
-          class="absolute right-4 top-2 p-1 rounded-full hover:bg-red-400 hover:text-white cursor-pointer duration-200 flex items-center justify-center">
+          class="absolute text-white right-4 top-2 p-1 rounded-full hover:bg-red-400 hover:text-white cursor-pointer duration-200 flex items-center justify-center">
           <i class="fas fa-close"></i>
         </button>
+        <div class="flex flex-col p-2 pt-6 gap-1" id="titleText2"></div>
       </div>
     </div>
 
