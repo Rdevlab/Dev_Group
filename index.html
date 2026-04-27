@@ -30,7 +30,7 @@
       .bg {
         background:
           linear-gradient(135deg, rgba(0, 0, 0, 0.165), rgba(0, 0, 0, 0.141)),
-          url("./assets/bg.jpg");
+          url("./assets/bgGreen.png");
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -78,7 +78,9 @@
       <div
         class="flex flex-col xl:gap-6 gap-4 xl:p-10 md:p-8 p-8 rounded-md bg-white/30 backdrop-blur-xl shadow-xl">
         <div class="flex flex-col gap-2 items-center">
-          <i class="fa-regular fa-user text-5xl"></i>
+          <span class="flex justify-center items-center p-2 border rounded-full w-20 h-20"
+            ><i class="fa-regular fa-user text-5xl text-green-800"></i
+          ></span>
           <h1 class="font-bold xl:text-2xl text-lg w-full text-center">Log in to your account</h1>
         </div>
         <div class="flex items-start flex-col">
@@ -98,13 +100,15 @@
             placeholder="password"
             maxlength="12"
             class="border border-transparent border-b-black w-full p-1" />
-          <button class="absolute top-1/2 right-2" id="eyeBtnPassword">
+          <button
+            class="absolute top-1/2 right-2 hover:text-green-950 cursor-pointer"
+            id="eyeBtnPassword">
             <i class="fas fa-eye"></i>
           </button>
         </div>
         <button
           type="submit"
-          class="px-4 py-2 bg-blue-600 cursor-pointer text-white rounded-md hover:bg-blue-400 duration-200"
+          class="px-4 py-2 bg-green-600 cursor-pointer text-white rounded-md hover:bg-green-400 duration-200"
           onclick="login()">
           Login
         </button>
@@ -143,10 +147,10 @@
     <!-- show proect titles -->
     <div class="absolute top-10 flex gap-2">
       <aside
-        class="flex flex-col min-w-16 gap-4 h-max py-4 pr-4 bg-white/50 backdrop-blur-md pt-2 pr-2 overflow-y-scroll rounded-r-xl"
+        class="flex flex-col min-w-16 gap-4 h-max py-4 pr-4 bg-green-200/50 backdrop-blur-md pt-2 pr-2 overflow-y-scroll rounded-r-xl"
         id="titleShow"></aside>
       <div
-        class="w-0 min-h-10 relative bg-white/20 rounded-xl flex flex-col gap-2 duration-200 overflow-hidden"
+        class="w-0 min-h-10 relative bg-white/20 rounded-xl flex flex-col gap-1 pt-6 duration-200 overflow-hidden"
         id="titleText">
         <button
           onclick="titleTextClose()"

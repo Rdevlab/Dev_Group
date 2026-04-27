@@ -4,63 +4,53 @@ const tasks = [
     id: 1,
     round: 1,
     designer: "Rohullah",
-    designerImage:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
     time: 24,
-    title: "I love you",
-    info: `I love you too`,
+    title: "DevGrpup full Porject Development",
+    info: `Create prjects, imporve the platform`,
     link: "",
-    finalLink: " ",
+    finalLink: "https://dev_group_mu.vercel.app",
     state: "incomplete",
   },
   {
     id: 2,
     round: 1,
     designer: "sarabi",
-    designerImage:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
     time: 24,
     title: "Modern Navbar Design",
     info: `
     ابتدا یک هدر در بالای صفحه ایجاد کنید. لوگو را در سمت چپ و منو را در سمت راست قرار دهید. لینک‌های خانه، درباره، خدمات و تماس اضافه کنید. یک دکمه برجسته مانند شروع کنید قرار دهید. با Tailwind رنگ مناسب، فاصله داخلی، سایه و ارتفاع استاندارد بدهید. هدر را با Flex مرتب کنید و برای موبایل منوی همبرگر بسازید.`,
     link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3bY1gM9oeOTjVScq88B6A2VpVoM1vc6gDkA&s",
-    finalLink: " ",
+    finalLink: "https://hanifsarab.github.io/sarabi-task/",
     state: "completed",
   },
   {
     id: 3,
     round: 1,
     designer: "mahram",
-    designerImage:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
     time: 24,
     title: "Smart To Do App",
     info: `برای ساخت برنامه Todo، ابتدا صفحه‌ای با HTML بساز. با Tailwind ظاهر زیبا بده. یک input برای نوشتن کارها و دکمه افزودن قرار بده. با JavaScript هنگام کلیک، کار جدید اضافه کن. امکان حذف، علامت انجام‌شده و ذخیره در localStorage را نیز ایجاد کن. طراحی را واکنش‌گرا و مرتب نگه دار.`,
     link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzpvDZyDL7Vjk0JVBymK02u6yMpkiM8i7cYw&s",
-    finalLink: " ",
+    finalLink: "https://mahranjan0093-cmyk.github.io/new/",
     state: "completed",
   },
   {
     id: 4,
     round: 1,
     designer: "hashimi",
-    designerImage:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
     time: 24,
     title: "Product Page",
     info: `
     ابتدا ساختار صفحه را با HTML بسازید. هدر، عنوان و بخش محصولات را اضافه کنید. سپس برای هر محصول کارت شامل تصویر، نام، قیمت و دکمه خرید طراحی کنید. با Tailwind رنگ، فاصله و سایه بدهید. کارت‌ها را با flex مرتب کنید. صفحه را واکنش‌گرا سازید. در پایان فوتر اضافه کرده و ظاهر صفحه را بررسی کنید کامل.
     `,
     link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQIuza7xgQsQwrJukBLtY_ODcm6Zi0XWcfuiw&s",
-    finalLink: " ",
+    finalLink: "https://ali13767676.github.io/taskone/",
     state: "incomplete",
   },
   {
     id: 5,
     round: 1,
     designer: "nabavi",
-    designerImage:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
     time: 24,
     title: "Simple Profile",
     info: `
@@ -74,8 +64,6 @@ const tasks = [
     id: 2,
     round: 2,
     designer: "sarabi",
-    designerImage:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
     time: 48,
     title: "Pop Up modle",
     info: `پاپ اپ که برای نمایش دادن خطا استفاده میشود. مثلا در صورت درست نبودن پسورد یا هم مشکل ارتباطی انترنت این پاپ اپ شامل یک دکمه برای بستن خطا و مقداری جزیات جزیی باشد. و در اول یک دکمه برای نمایشن دادن خطا. پاپ اپ باید توسط جاوااسکریب اضافه شود. و با با css از لحاظ ظاهری طراحی گردد. `,
@@ -87,8 +75,6 @@ const tasks = [
     id: 3,
     round: 2,
     designer: "mahram",
-    designerImage:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
     time: 48,
     title: "Responsive and Animative Navbar",
     info: `یک هیدر با لینک های مجزا که توسط جاوااسکریب اضافه شده و با tailwind طراحی میگردد. لینک باید دارای خاصیت hover effect باشد و با لطافت خیلی بالا. در دستگاه های مختلف باید قابلیت اجرا بدون نقص داشته باشد. هدف از این پروژه بکارگیری array,object میباشد.`,
@@ -100,8 +86,6 @@ const tasks = [
     id: 4,
     round: 2,
     designer: "hashimi",
-    designerImage:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
     time: 48,
     title: "Card Container",
     info: `جعبه کارت. محتویاات کارت شامل پروفایل شخصی میباشد که در ان عکس.نام.تخلص.مقداری معلومات کوتاه و دکمه برای تماس باشد. برای طراحی از tailwind استفاده شود و منبح محتویات کارت ها در array,object  ذخیره گردد`,
@@ -113,9 +97,6 @@ const tasks = [
     id: 5,
     round: 2,
     designer: "nabavi",
-    designerImage:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
-    time: 48,
     title: "Social Media Links",
     info: `لینک چهار اپ مجازی که شامل فیسبوک. واتساب. گیتهاب. انستاگرام میباشد. هر لینک باید دارنده hover-effect باشد. در این خاصیت برای هم دکمه متفاوت باشد. `,
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84b6ea97785273.5ecd5d6f9e7c4.png",
@@ -128,40 +109,35 @@ const Users = [
   {
     id: 1,
     name: "Rohullah Ahmadi",
-    image:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
+    image: "./assets/RohullahProfile.png",
     username: "Rohullah",
     password: "neo",
   },
   {
     id: 2,
     name: "Hanif Sarabi",
-    image:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
+    image: "./assets/hanifPorfile.jpeg",
     username: "sarabi",
     password: "Hanif@#2001",
   },
   {
     id: 3,
     name: "Mahram Rezaiee",
-    image:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
+    image: "./assets/mahramProfile.jpeg",
     username: "mahram",
     password: "M523",
   },
   {
     id: 4,
     name: "Ali Reza Hashimi",
-    image:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
+    image: "./assets/hashimiProfile.jpeg",
     username: "hashimi",
     password: "Ali435",
   },
   {
     id: 5,
     name: "Ali Nabavi",
-    image:
-      "https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?semt=ais_hybrid&w=740&q=80",
+    image: "./assets/aliProfile.jpeg",
     username: "nabavi",
     password: "nabavi12",
   },
@@ -334,7 +310,7 @@ function showtasksTitle() {
     const container = document.createElement("button");
     container.setAttribute("onclick", `updateTitle('${user.username}')`);
     container.classList =
-      "flex items-center gap-2 p-1 hover:scale-110 hover:shadow-xl cursor-pointer hover:bg-white/20  rounded-full ml-2 h-max w-max justify-center  titleContainer duration-300";
+      "flex items-center gap-2 p-1 hover:scale-110 hover:shadow-xl cursor-pointer hover:bg-white/20  rounded-full ml-2 h-max w-ma w-full justify-center  titleContainer duration-300";
     container.innerHTML = `
     <img src="${user.image}" class="w-8 h-8 rounded-full" />
     <div class="flex w-full h-full items-center  text-black hidden title duration-200">
@@ -393,6 +369,7 @@ function updateTitle(e) {
           class="absolute right-4 top-2 p-1 rounded-full hover:bg-red-400 hover:text-white cursor-pointer duration-200 flex items-center justify-center">
           <i class="fas fa-close"></i>
         </button>`;
+  let i = 1;
   tasks.forEach((tas) => {
     if (e === tas.designer) {
       const container = document.createElement("div");
@@ -401,7 +378,7 @@ function updateTitle(e) {
           onclick="titleTextClose()"
           class="absolute right-4 top-2 p-1 rounded-full hover:bg-red-400 hover:text-white cursor-pointer duration-200 flex items-center justify-center">
           <i class="fas fa-close"></i>
-        </button> <p>${tas.title}</p>`;
+        </button> <p class="w-full bg-white/50 px-2 py-1 rounded-md">${i++}: ${tas.title}</p>`;
 
       document.querySelector("#titleText").append(container);
     }
