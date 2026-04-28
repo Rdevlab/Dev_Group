@@ -9,7 +9,7 @@ const tasks = [
     info: `Create prjects, imporve the platform`,
     link: "",
     finalLink: "https://dev_group_mu.vercel.app",
-    state: "completed",
+    state: "in progress",
   },
   {
     id: 2,
@@ -68,8 +68,8 @@ const tasks = [
     title: "Pop Up modle",
     info: `پاپ اپ که برای نمایش دادن خطا استفاده میشود. مثلا در صورت درست نبودن پسورد یا هم مشکل ارتباطی انترنت این پاپ اپ شامل یک دکمه برای بستن خطا و مقداری جزیات جزیی باشد. و در اول یک دکمه برای نمایشن دادن خطا. پاپ اپ باید توسط جاوااسکریب اضافه شود. و با با css از لحاظ ظاهری طراحی گردد. `,
     link: "https://i.pinimg.com/236x/10/87/dc/1087dc58864fe9f4a637f876add288bd.jpg",
-    finalLink: " ",
-    state: "incomplete",
+    finalLink: "",
+    state: "completed",
   },
   {
     id: 3,
@@ -79,7 +79,7 @@ const tasks = [
     title: "Responsive and Animative Navbar",
     info: `یک هیدر با لینک های مجزا که توسط جاوااسکریب اضافه شده و با tailwind طراحی میگردد. لینک باید دارای خاصیت hover effect باشد و با لطافت خیلی بالا. در دستگاه های مختلف باید قابلیت اجرا بدون نقص داشته باشد. هدف از این پروژه بکارگیری array,object میباشد.`,
     link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGEV4jLHYgyzxq4CSba-BqguVyZ-RZ9z0i-w&s",
-    finalLink: " ",
+    finalLink: "",
     state: "incomplete",
   },
   {
@@ -90,8 +90,8 @@ const tasks = [
     title: "Card Container",
     info: `جعبه کارت. محتویاات کارت شامل پروفایل شخصی میباشد که در ان عکس.نام.تخلص.مقداری معلومات کوتاه و دکمه برای تماس باشد. برای طراحی از tailwind استفاده شود و منبح محتویات کارت ها در array,object  ذخیره گردد`,
     link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_Psuggmw_I14zzlM8mt7IxOT-Ds-_EhPiDw&s",
-    finalLink: " ",
-    state: "incomplete",
+    finalLink: "",
+    state: "completed",
   },
   {
     id: 5,
@@ -100,11 +100,44 @@ const tasks = [
     title: "Social Media Links",
     info: `لینک چهار اپ مجازی که شامل فیسبوک. واتساب. گیتهاب. انستاگرام میباشد. هر لینک باید دارنده hover-effect باشد. در این خاصیت برای هم دکمه متفاوت باشد. `,
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84b6ea97785273.5ecd5d6f9e7c4.png",
-    finalLink: " ",
+    finalLink: "",
+    state: "incomplete",
+  },
+// third round
+  {
+    id: 2,
+    round: 3,
+    designer: "sarabi",
+    time: 48,
+    title: "Gamin Website Footer",
+    info:`Design a creative and modern Navbar for Gaming website. use html and tailwind to form the structure and user tailwind to make to creative`,
+    link: "https://i.pinimg.com/originals/14/39/64/143964f71d013a294db3ee7d677466db.png",
+    finalLink: "",
+    state: "incomplete",
+  },
+  {
+    id: 3,
+    round: 3,
+    designer: "mahram",
+    time: 48,
+    title: "Gaming website About Page",
+    info: `Design an interactive about page, use tailwind for design and html for structer use javascript to make it interactive`,
+    link: "",
+    finalLink: "",
+    state: "incomplete",
+  },
+  {
+    id: 4,
+    round: 3,
+    designer: "hashimi",
+    time: 48,
+    title: "Gaming website Featured Games page",
+    info: `Create a page the contains games which are selected via most downloaded or most searched or newy added`,
+    link: "",
+    finalLink: "",
     state: "incomplete",
   },
 ];
-
 const Users = [
   {
     id: 1,
@@ -180,7 +213,7 @@ function login() {
                <p><strong> Time: </strong> ${task.time} hours</p>  
               </div>
               <div class="flex p-2 border rounded-md items-center justify-between  backdrop-blur-xl">
-              <p dir="rtl" class="flex flex-col gap-1 items-start"><strong>جزئیات: </strong>${task.info}</p>
+              <p class="flex flex-col gap-1 items-start"><strong>جزئیات: </strong>${task.info}</p>
               </div>
              
              <div class="flex items-center justify-between px-8 gap-10">
@@ -214,7 +247,7 @@ function login() {
                <p><strong> Time: </strong> ${task.time} hours</p>  
               </div>
               <div class="flex p-2 border rounded-md items-center justify-between  backdrop-blur-xl">
-              <p dir="rtl" class="flex flex-col gap-1 items-start"><strong>جزئیات: </strong>${task.info}</p>
+              <p class="flex flex-col gap-1 items-start"><strong>جزئیات: </strong>${task.info}</p>
               </div>
              
               <div class="flex items-center justify-between px-8 gap-10">

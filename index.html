@@ -8,6 +8,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
     <script src="app.js" defer></script>
+    <script src="src/tasks.js" defer></script>
     <title>Dev_Tasks</title>
     <style>
       * {
@@ -44,6 +45,14 @@
       .show {
         animation: show 0.5s linear alternate forwards;
       }
+
+      /*
+      Background: #050816
+      Card: #111827
+      Primary Button: #007BFF
+      Hover: #00F0FF
+      Text: #FFFFFF
+      */
       @keyframes show {
         from {
           height: 0;
@@ -134,15 +143,16 @@
           نکردید هم شروع کنید و در ختم پروژه فقط لینک پروژه خود را بفرستید
         </p>
       </div>
-
       <div class="flex flex-col items-center gap-4 border rounded-xl p-2">
-        <span class="xl:text-4xl text-xl"><i class="fab fa-figma"></i></span>
-        <p class="text-sm" dir="rtl">
-          دوستایل عزیز عکس ها به صورت نمونه ارایه میگردد. کار شما نباید دقیقا شبیه عکس ها باشد. شما
-          میتوانید با خلاقیت خودتان انها را بهتر و زیباتر طراحی کنید. هدف اینست که شما با چالش های
-          مختلف آشنا بشید و بتوانید انها را حل کنید. نگران نباشید اگر نتوانستید دقیقا شبیه عکس ها
-          طراحی کنید.
-        </p>
+        <span class="xl:text-4xl text-xl"><i class="fas fa-code"></i></span>
+        <p>color codes for Gamin website</p>
+        <code class="text-sm">
+          --background: #050816;<br />
+          --card: #111827;<br />
+          --primarybtn: #007bff;<br />
+          --primary: #a100d6;<br />
+          --text:#ffffff;
+        </code>
       </div>
     </article>
     <!-- show proect titles -->
