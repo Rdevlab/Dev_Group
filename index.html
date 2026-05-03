@@ -6,7 +6,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
     <script src="app.js" defer></script>
     <script src="src/tasks.js" defer></script>
     <title>Dev_Tasks</title>
@@ -83,15 +84,19 @@
   <body class="overflow-hidden">
     <section
       class="w-full h-screen flex items-center justify-center bg fixed top-0 p-10 left-0 right-0 bottom-0 overflow-hidden"
-      id="loginsec">
+      id="loginsec"
+    >
       <div
-        class="flex flex-col xl:gap-6 gap-4 xl:p-10 md:p-8 p-8 rounded-md bg-white/30 backdrop-blur-xl shadow-xl">
+        class="flex flex-col xl:gap-6 gap-4 xl:p-10 md:p-8 p-8 rounded-md bg-white/30 backdrop-blur-xl shadow-xl"
+      >
         <div class="flex flex-col gap-2 items-center">
           <span
             class="flex justify-center items-center p-2 border border-white rounded-full w-20 h-20"
             ><i class="fa-regular fa-user text-5xl text-white"></i
           ></span>
-          <h1 class="font-bold xl:text-2xl text-lg w-full text-center">Log in to your account</h1>
+          <h1 class="font-bold xl:text-2xl text-lg w-full text-center">
+            Log in to your account
+          </h1>
         </div>
         <div class="flex items-start flex-col">
           <label for="username">Enter your userName</label>
@@ -100,7 +105,8 @@
             id="username"
             maxlength="12"
             placeholder="Username"
-            class="border border-transparent w-full border-b-black bg-none p-1" />
+            class="border border-transparent w-full border-b-black bg-none p-1"
+          />
         </div>
         <div class="flex items-start flex-col relative">
           <label for="password"> Enter your password</label>
@@ -109,17 +115,20 @@
             id="password"
             placeholder="password"
             maxlength="12"
-            class="border border-transparent border-b-black w-full p-1" />
+            class="border border-transparent border-b-black w-full p-1"
+          />
           <button
             class="absolute top-1/2 right-2 hover:text-green-950 cursor-pointer"
-            id="eyeBtnPassword">
+            id="eyeBtnPassword"
+          >
             <i class="fas fa-eye"></i>
           </button>
         </div>
         <button
           type="submit"
           class="px-4 py-2 bg-green-600 cursor-pointer text-white rounded-md hover:bg-green-400 duration-200"
-          onclick="login()">
+          onclick="login()"
+        >
           Login
         </button>
       </div>
@@ -129,18 +138,21 @@
     <button
       class="p-2 bg-white/50 backdrop-blur-xl rounded-full flex items-center justify-center absolute text-white right-6 top-4 z-50"
       onclick="showNotification()"
-      id="showNotificationBtn">
+      id="showNotificationBtn"
+    >
       <i class="fas fa-bell"></i>
     </button>
 
     <article
       id="notes"
-      class="absolute w-80 xl:text-xl flex flex-col gap-3 items-center p-4 bg-white/50 backdrop-blur-xl rounded-xl xl:right-14 right-6 xl:top-14 top-16 z-50 show1 duration-300">
+      class="absolute w-80 xl:text-xl flex flex-col gap-3 items-center p-4 bg-white/50 backdrop-blur-xl rounded-xl xl:right-14 right-6 xl:top-14 top-16 z-50 show1 duration-300"
+    >
       <div class="flex flex-col items-center gap-4 border rounded-xl p-2">
-        <span class="xl:text-4xl text-xl"><i class="fab fa-github"></i></span>
-        <p dir="rtl" class="text-sm">
-          دوستان عزیز در جریان این برنامه شما باید اپ گیتهاب را یاد داشته باشید. اگر هنوز شروع
-          نکردید هم شروع کنید و در ختم پروژه فقط لینک پروژه خود را بفرستید
+        <span class="xl:text-4xl text-xl"><i class="fas fa-user"></i> </span>
+        <p class="text-sm">
+          Nikzad is going to cover the html,tailwindcss project of the gaming
+          website, please sent your files to Ali Nikzad so he can make the file.
+          when it's done i will be working on react file
         </p>
       </div>
       <div class="flex flex-col items-center gap-4 border rounded-xl p-2">
@@ -159,13 +171,16 @@
     <div class="absolute top-10 flex gap-2" id="asideTitleShow">
       <aside
         class="flex flex-col min-w-16 gap-4 h-max py-4 pr-4 bg-green-200/50 backdrop-blur-md pt-2 pr-2 overflow-y-scroll rounded-r-xl z-40"
-        id="titleShow"></aside>
+        id="titleShow"
+      ></aside>
       <div
         class="w-0 min-h-10 relative bg-white/20 rounded-xl backdrop-blur-sm flex flex-col gap-1 pt-6 duration-200 overflow-hidden"
-        id="titleText">
+        id="titleText"
+      >
         <button
           onclick="titleTextClose()"
-          class="absolute text-white right-4 top-2 p-1 rounded-full hover:bg-red-400 hover:text-white cursor-pointer duration-200 flex items-center justify-center">
+          class="absolute text-white right-4 top-2 p-1 rounded-full hover:bg-red-400 hover:text-white cursor-pointer duration-200 flex items-center justify-center"
+        >
           <i class="fas fa-close"></i>
         </button>
         <div class="flex flex-col p-2 pt-6 gap-1" id="titleText2"></div>
@@ -174,9 +189,11 @@
 
     <section
       id="taskContainer"
-      class="w-full h-screen flex flex-col justify-around md:flex-row xl:flex-row gap-8 p-10 bg overflow-hidden overflow-y-scroll xl:flex-wrap md:flex-wrap"></section>
+      class="w-full h-screen flex flex-col justify-around md:flex-row xl:flex-row gap-8 p-10 bg overflow-hidden overflow-y-scroll xl:flex-wrap md:flex-wrap"
+    ></section>
     <section
       class="absolute right-14 bottom-14 flex flex-col gap-6 overflow-hidden overflow-y-scroll"
-      id="toastcontaienr"></section>
+      id="toastcontaienr"
+    ></section>
   </body>
 </html>

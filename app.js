@@ -80,7 +80,7 @@ const tasks = [
     info: `یک هیدر با لینک های مجزا که توسط جاوااسکریب اضافه شده و با tailwind طراحی میگردد. لینک باید دارای خاصیت hover effect باشد و با لطافت خیلی بالا. در دستگاه های مختلف باید قابلیت اجرا بدون نقص داشته باشد. هدف از این پروژه بکارگیری array,object میباشد.`,
     link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGEV4jLHYgyzxq4CSba-BqguVyZ-RZ9z0i-w&s",
     finalLink: "",
-    state: "incomplete",
+    state: "completed",
   },
   {
     id: 4,
@@ -101,19 +101,19 @@ const tasks = [
     info: `لینک چهار اپ مجازی که شامل فیسبوک. واتساب. گیتهاب. انستاگرام میباشد. هر لینک باید دارنده hover-effect باشد. در این خاصیت برای هم دکمه متفاوت باشد. `,
     link: "https://mir-s3-cdn-cf.behance.net/project_modules/disp/84b6ea97785273.5ecd5d6f9e7c4.png",
     finalLink: "",
-    state: "incomplete",
+    state: "completed",
   },
-// third round
+  // third round
   {
     id: 2,
     round: 3,
     designer: "sarabi",
     time: 48,
     title: "Gamin Website Footer",
-    info:`Design a creative and modern Navbar for Gaming website. use html and tailwind to form the structure and user tailwind to make to creative`,
+    info: `Design a creative and modern Navbar for Gaming website. use html and tailwind to form the structure and user tailwind to make to creative`,
     link: "https://i.pinimg.com/originals/14/39/64/143964f71d013a294db3ee7d677466db.png",
     finalLink: "",
-    state: "incomplete",
+    state: "completed",
   },
   {
     id: 3,
@@ -124,7 +124,7 @@ const tasks = [
     info: `Design an interactive about page, use tailwind for design and html for structer use javascript to make it interactive`,
     link: "",
     finalLink: "",
-    state: "incomplete",
+    state: "completed",
   },
   {
     id: 4,
@@ -135,7 +135,7 @@ const tasks = [
     info: `Create a page the contains games which are selected via most downloaded or most searched or newy added`,
     link: "",
     finalLink: "",
-    state: "incomplete",
+    state: "completed",
   },
 ];
 const Users = [
@@ -236,7 +236,8 @@ function login() {
     document.querySelector("#asideTitleShow").classList.add("hidden");
     tasks.forEach((task) => {
       const container = document.createElement("div");
-      container.classList = "flex flex-col gap-2 p-2 xl:w-150 w-full h-max rounded-md bg-white/50";
+      container.classList =
+        "flex flex-col gap-2 p-2 xl:w-150 w-full h-max rounded-md bg-white/50";
       container.innerHTML = `
               <div class="flex p-2 border rounded-md items-center justify-between">
               <h2 class="text-xl font-bold"> <stron>Title: </strong> ${task.title}</h2>  
@@ -369,7 +370,8 @@ function updateTitle(e) {
   tasks.forEach((tas) => {
     if (e === tas.designer) {
       const container = document.createElement("div");
-      container.classList = "flex gap-2 items-center bg-white/50 p-1 w-full text-sm rounded-xl";
+      container.classList =
+        "flex gap-2 items-center bg-white/50 p-1 w-full text-sm rounded-xl";
       container.innerHTML = `
       <span class='flex w-8 h-8 shrink-0 items-center p-1 rounded-full justify-center bg-green-300'>${i++}</span>
        <div class="flex flex-col w-full">
