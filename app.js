@@ -11,6 +11,18 @@ const tasks = [
     finalLink: "https://dev_group_mu.vercel.app",
     state: "in progress",
   },
+    {
+    id: 1,
+    round: 1,
+    designer: "Rohullah",
+    time: 24,
+    title: "DevGrpup full Porject Development",
+    info: `Create prjects, improve the platform`,
+    link: "",
+    finalLink: "https://dev_group_mu.vercel.app",
+    state: "in progress",
+  },
+  
 ];
 const Users = [
   {
