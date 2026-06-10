@@ -14,6 +14,7 @@
     <style>
       * {
         outline: none;
+        font-family: "Times New Roman", Times, serif;
       }
       ::-webkit-scrollbar {
         display: none;
@@ -136,40 +137,37 @@
 
     <!-- notification -->
     <button
-      class="p-2 bg-white/50 backdrop-blur-xl rounded-full flex items-center justify-center absolute text-white right-6 top-18 z-50"
+      class="p-2 bg-white/50 rounded-full flex items-center justify-center absolute text-white right-6 top-18 z-50"
       onclick="showNotification()"
       id="showNotificationBtn"
     >
       <i class="fas fa-bell"></i>
     </button>
     <a
-      class="absolute top-6 flex items-center right-6 text-xl text-white p-2 rounded-full bg-white/60 font-bold z-50"
+      class="absolute top-6 flex items-center right-6 text-white p-2 rounded-full bg-white/60 font-bold z-50"
       href="index.html"
       ><i class="fa fa-home"></i
     ></a>
 
     <article
       id="notes"
-      class="absolute w-80 xl:text-xl flex flex-col gap-3 items-center p-4 bg-white/50 backdrop-blur-xl rounded-xl xl:right-14 right-6 xl:top-14 top-16 z-50 show1 duration-300"
+      class="absolute w-80 xl:text-xl flex flex-col gap-3 items-center p-4 bg-white/50 backdrop-blur-xl rounded-xl xl:right-18 right-10 xl:top-18 top-16 z-50 show1 duration-300"
     >
-      <div class="flex flex-col items-center gap-4 border rounded-xl p-2">
+      <div
+        class="flex flex-col items-center gap-4 border rounded-xl p-2 w-full"
+      >
         <span class="xl:text-4xl text-xl"><i class="fas fa-user"></i> </span>
-        <p class="text-sm">
-          Nikzad is going to cover the html,tailwindcss project of the gaming
-          website, please sent your files to Ali Nikzad so he can make the file.
-          when it's done i will be working on react file
-        </p>
+        <p class="text-sm">happy new projects inshallah</p>
       </div>
-      <div class="flex flex-col items-center gap-4 border rounded-xl p-2">
+      <div
+        class="flex flex-col items-center gap-4 border rounded-xl p-2 w-full h-full"
+      >
         <span class="xl:text-4xl text-xl"><i class="fas fa-code"></i></span>
-        <p>color codes for Gamin website</p>
-        <code class="text-sm">
-          --background: #050816;<br />
-          --card: #111827;<br />
-          --primarybtn: #007bff;<br />
-          --primary: #a100d6;<br />
-          --text:#ffffff;
-        </code>
+        <b>Tasks</b>
+        <ul class="text-sm">
+          <li>UMS Unirversity managment system</li>
+          <li>Box market online shop</li>
+        </ul>
       </div>
     </article>
     <!-- show proect titles -->
@@ -194,7 +192,7 @@
 
     <section
       id="taskContainer"
-      class="w-full h-screen flex flex-col justify-around md:flex-row xl:flex-row gap-8 p-10 bg overflow-hidden overflow-y-scroll xl:flex-wrap md:flex-wrap"
+      class="w-full h-screen flex flex-col md:flex-row xl:flex-row gap-8 p-10 bg overflow-hidden overflow-y-scroll xl:flex-wrap md:flex-wrap"
     ></section>
     <section
       class="absolute right-14 bottom-14 flex flex-col gap-6 overflow-hidden overflow-y-scroll"

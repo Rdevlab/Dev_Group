@@ -6,18 +6,32 @@ const tasks = [
     designer: "Rohullah",
     time: 24,
     title: "DevGrpup full Project Development",
+    group: "UMS && Boxmarket",
     info: `Create projects, improve the platform`,
     link: "",
     finalLink: "https://dev_group_mu.vercel.app",
     state: "in progress",
   },
   {
-    id: 1,
+    id: 2,
     round: 1,
     designer: "latif",
     time: 24,
-    title: "Univercity project management and development",
-    info: `updating according to latest technologies`,
+    title: "Products source file",
+    group: "Boxmarket",
+    info: `create a source file which contains all the product info`,
+    link: "",
+    finalLink: "",
+    state: "in progress",
+  },
+  {
+    id: 3,
+    round: 1,
+    designer: "mahram",
+    time: 24,
+    title: "A quick login form",
+    group: "Boxmarket",
+    info: `یک لاگین فارمی که در اول سایت باشد وقتی مشتری وارد میشود پرسیده شوه که ایا میخواهید حساب جدید تشکیل دهید یا به حیث مهمان ادامه دهید`,
     link: "",
     finalLink: "",
     state: "in progress",
@@ -89,6 +103,10 @@ eye.addEventListener("click", () => {
   }
 });
 
+document.addEventListener("keydown", (e) => {
+  e.keyCode === 13 ? login() : null;
+});
+
 function login() {
   const user = Users.find((u) => {
     return u.username === username.value && u.password === password.value;
@@ -101,18 +119,19 @@ function login() {
       if (username.value === task.designer) {
         const container = document.createElement("div");
         container.classList =
-          "flex flex-col gap-2 p-2 xl:w-150 w-full h-max rounded-md bg-white/50";
+          "flex flex-col gap-2 p-2 xl:w-100 w-full h-max rounded-md bg-white/50 text-sm backdrop-blur-md";
         container.innerHTML = `
               <div class="flex p-2 border rounded-md items-center justify-between">
-              <h2 class="text-xl font-bold"> <stron>Title: </strong> ${task.title}</h2>  
-                 <p><strong>Designer: </strong>${task.designer}</p>
+                  <h2> <stron>Title: </strong> ${task.title}</h2>  
+                  <p><strong>Designer: </strong>${task.designer}</p>
               </div>
-                <div class="flex p-2 border rounded-md items-center justify-between">
-               <h1><strong>No: </strong>${task.round}</h1>  
-               <p><strong> Time: </strong> ${task.time} hours</p>  
+              <div class="flex p-2 border rounded-md items-center justify-between">
+              <spab>${task.group}</spab>
+                <h1><strong>No: </strong>${task.round}</h1>  
+                <p><strong> Time: </strong> ${task.time} hours</p>  
               </div>
-              <div class="flex p-2 border rounded-md items-center justify-between  backdrop-blur-xl">
-              <p class="flex flex-col gap-1 items-start"><strong>جزئیات: </strong>${task.info}</p>
+              <div class="flex p-2 border rounded-md items-center justify-between text-lg">
+                <p class="flex flex-col gap-1 items-start"><strong>Details: </strong>${task.info}</p>
               </div>
              
              <div class="flex items-center justify-between px-8 gap-10">
@@ -136,18 +155,19 @@ function login() {
     tasks.forEach((task) => {
       const container = document.createElement("div");
       container.classList =
-        "flex flex-col gap-2 p-2 xl:w-150 w-full h-max rounded-md bg-white/50";
+        "flex flex-col gap-2 p-2 xl:w-100 w-full h-max rounded-md bg-white/50 text-sm backdrop-blur-md";
       container.innerHTML = `
               <div class="flex p-2 border rounded-md items-center justify-between">
-              <h2 class="text-xl font-bold"> <stron>Title: </strong> ${task.title}</h2>  
+              <h2> <strong>Title: </strong> ${task.title}</h2>  
                  <p><strong>Designer: </strong>${task.designer}</p>
               </div>
                 <div class="flex p-2 border rounded-md items-center justify-between">
+                 <spab>${task.group}</spab>
                <h1><strong>No: </strong>${task.round}</h1>  
                <p><strong> Time: </strong> ${task.time} hours</p>  
               </div>
-              <div class="flex p-2 border rounded-md items-center justify-between  backdrop-blur-xl">
-              <p class="flex flex-col gap-1 items-start"><strong>جزئیات: </strong>${task.info}</p>
+              <div class="flex p-2 border rounded-md items-center justify-between text-lg">
+              <p class="flex flex-col gap-1 items-start"><strong>Details: </strong>${task.info}</p>
               </div>
              
               <div class="flex items-center justify-between px-8 gap-10">
